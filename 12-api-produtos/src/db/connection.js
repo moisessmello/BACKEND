@@ -8,10 +8,13 @@ const DB_NAME = process.env.DB_NAME
 
 
 function main() {
-    mongoose.connect(`mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`)
+    mongoose.connect(`mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority&appName=Minha-API`)
         .then(() => console.log("Conectado ao banco Mongo"))
         .catch(error => console.log("Erro ao conectar no banco Mongo: ", error))
 }
+
+
+
 
 
 

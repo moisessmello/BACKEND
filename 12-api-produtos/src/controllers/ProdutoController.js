@@ -1,6 +1,8 @@
 const Produto = require('../models/produto')
 
 async function getAll(req, res) {
+    Produto.find
+
     const produtos = await Produto.find()
     res.json(produtos)
 }

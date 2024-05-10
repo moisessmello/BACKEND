@@ -13,9 +13,4 @@ function main() {
         .catch(error => console.log("Erro ao conectar no banco Mongo: ", error))
 }
 
-
-
-
-
-
 module.exports = main

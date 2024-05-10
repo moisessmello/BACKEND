@@ -1,13 +1,14 @@
 const mongoose = require('mongoose')
 
-const schema = new mongoose.Schema({
-    nome: {
-        type: String,
-        required: true
-    }
+const schema = new mongoose.Schema(
+    {
+        nome: {
+            type: String,
+            required: true
+        }
     },
     {
-        timestamps: true,
+        timestamps: true
     }
 )
 

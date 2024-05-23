@@ -32,7 +32,7 @@ const schema = new mongoose.Schema(
     {
         timestamps: true
     }
-    
+
 )
 
 const Tarefa = mongoose.model('tarefa', schema)

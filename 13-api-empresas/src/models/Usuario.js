@@ -13,19 +13,13 @@ const schema = new mongoose.Schema(
         senha: {
             type: String,
             required: true
-        },
- }
-)
-
-const Usuario = mongoose.model('funcionario', schema)
-
-module.exports = Funcionario
-
-        
+        }
+    },
     {
         timestamps: true
     }
+)
 
-const Funcionario = mongoose.model('funcionario', schema)
+const Usuario = mongoose.model('usuario', schema)
 
-module.exports = Funcionario
+module.exports = Usuario

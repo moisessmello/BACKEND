@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express');
 const router = express.Router()
 
 // controllers
@@ -9,7 +9,7 @@ const TarefaController = require('../controllers/TarefaController');
 const ProjetoController = require('../controllers/ProjetoController');
 
 // validators
-const { validarId } = require('../validators/IdValidator')
+const { validarId } = require('../validators/validarId')
 const { cargoValidador } = require('../validators/CargoValidator')
 const { departamentoValidador } = require('../validators/DepartamentoValidator')
 const { funcionarioValidador } = require('../validators/FuncionarioValidator')
@@ -32,17 +32,17 @@ router.delete('/departamentos/:id', validarId, DepartamentoController.remove)
 
 // Funcionarios
 router.post('/funcionarios', funcionarioValidador, FuncionarioController.create)
-router.get('/funcionarios', FuncionarioController.getAll)
+//router.get('/funcionarios', FuncionarioController.getAll)
 router.get('/funcionarios/:id', validarId, FuncionarioController.getById)
-router.put('/funcionarios/:id', validarId, funcionarioValidador, FuncionarioController.update)
-router.delete('/funcionarios/:id', validarId, FuncionarioController.remove)
+//router.put('/funcionarios/:id', validarId, funcionarioValidador, FuncionarioController.update)
+//router.delete('/funcionarios/:id', validarId, FuncionarioController.remove)
 
 //
 // Projetos
 router.post('/projetos', projetoValidador, ProjetoController.create);
 router.get('/projetos', ProjetoController.getAll);
 router.get('/projetos/:id', validarId, ProjetoController.getById);
-router.put('/projetos/:id', validarId, projetoValidador, ProjetoController.update);
+//router.put('/projetos/:id', validarId, projetoValidador, ProjetoController.update);
 router.delete('/projetos/:id', validarId, ProjetoController.remove);
 
 // Tarefas
